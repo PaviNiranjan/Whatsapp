@@ -11,7 +11,7 @@ class Whatsapp extends StatefulWidget {
 class _WhatsappState extends State<Whatsapp> {
   void _launchWhatsApp() async {
     // The phone number you want to open in WhatsApp
-    String phoneNumber =  "+969-834-0649";
+    String phoneNumber = "+969-834-0649";
 
     // Use the 'https://wa.me' URL with the phone number
     String url = 'https://wa.me/$phoneNumber';
@@ -26,11 +26,11 @@ class _WhatsappState extends State<Whatsapp> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Error'),
-            content: Text('WhatsApp is not installed on your device.'),
+            title: const Text('Error'),
+            content: const Text('WhatsApp is not installed on your device.'),
             actions: <Widget>[
               TextButton(
-                child: Text('Close'),
+                child: const Text('Close1'),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -46,7 +46,7 @@ class _WhatsappState extends State<Whatsapp> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: _launchWhatsApp,
-      child: Text('Open WhatsApp'),
+      child: const Text('Open WhatsApp'),
     );
   }
 }
